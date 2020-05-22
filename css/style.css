@@ -1,0 +1,72 @@
+h1,h2{
+    font-size: 60px;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 5px;
+}
+
+body{
+    background-image: url('https://pngimage.net/wp-content/uploads/2018/06/land-cartoon-png-1.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+
+.container{
+    width: 600px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    cursor: url('../img/palu1.png'), auto;
+}
+
+.container:active{
+    cursor: url('../img/palu2.png'), auto;
+}
+.tanah{
+    width: 200px;
+    height: 200px;
+    position: relative;
+    overflow: hidden;
+}
+.tanah::after{
+    content: '';
+    width: 200px;
+    height: 100px;
+    background: url('../img/tanah.png') bottom center no-repeat;
+    background-size: 80%;
+    position: absolute;
+    bottom: -25px;
+}
+.tikus{
+    background: url('../img/tikus.png') bottom center no-repeat;
+    background-size: 60%;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 150px;
+    transition: top 0.4s;
+    -webkit-transition: top 0.4s;
+    -moz-transition: top 0.4s;
+    -ms-transition: top 0.4s;
+    -o-transition: top 0.4s;
+}
+.tanah.muncul .tikus{
+    top: -15px;
+}
+.play{
+    background-color: orange;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    display: block;
+    margin: auto;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    cursor: pointer;
+
+}
